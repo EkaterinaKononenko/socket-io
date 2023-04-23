@@ -39,6 +39,7 @@ function Chat({ socket, userName, room }) {
                   className="message"
                   id={userName === messageContent.author ? "you" : "other"}
                 >
+                <div>
                   <div className="message-content">
                     <p>{messageContent.message}</p>
                   </div>
@@ -46,7 +47,8 @@ function Chat({ socket, userName, room }) {
                     <p id="time">{messageContent.time}</p>
                     <p id="author">{messageContent.author}</p>
                   </div>
-                </div>
+                  </div>
+                  </div>
               );
             })}
           </ScrollToBottom>
